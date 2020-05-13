@@ -210,7 +210,7 @@ static const NSUInteger onePageItemCount = 5;
 /** 获取指定index对应的itemButton */
 -(UIButton *)itemButtonAtIndex:(NSUInteger)index {
     //1.过滤数组越界
-    if (index > self.buttonArr.count-1) {
+    if (index >= self.buttonArr.count) {
         return nil;
     }
     //2.return
@@ -321,7 +321,7 @@ static const NSUInteger onePageItemCount = 5;
     }
     
     //2.过滤数组越界
-    if (selectedIndex > self.buttonArr.count-1) {
+    if (selectedIndex >= self.buttonArr.count) {
         return ;
     }
     

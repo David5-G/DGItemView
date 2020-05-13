@@ -9,11 +9,13 @@
 #import "ViewController.h"
 //view
 #import "DGItemView.h"
+#import "DGTimeItemView.h"
 
+#define rgba(r,g,b,a) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:a]
 #define SCREEN_WIDTH ([UIScreen mainScreen].bounds.size.width)
 #define SCREEN_HEIGHT ([UIScreen mainScreen].bounds.size.height)
 
-@interface ViewController ()<DGItemViewDelegate>
+@interface ViewController ()<DGItemViewDelegate,DGTimeItemViewDelegate>
 
 @property (nonatomic,weak)DGItemView *lineItemView;
 
@@ -35,6 +37,7 @@
     [self setupLineItemView];
     [self setupEquelWidthLayerItemView];
     [self setupLayerItemView];
+    [self setupTimeItemView];
 }
 
 /** lineItemView */
@@ -117,4 +120,39 @@
     NSLog(@"itemView点击index: %lu",(unsigned long)index);
     return YES;
 }
+
+
+
+#pragma mark - timeItemView
+-(void)setupTimeItemView {
+    //itemView
+    DGTimeItemView *itemV = [[DGTimeItemView alloc]initWithFrame:CGRectMake(0, 400, SCREEN_WIDTH, 40)];
+    itemV.backgroundColor = UIColor.whiteColor;
+    itemV.topTitleNormalFont = [UIFont systemFontOfSize:17 weight:UIFontWeightMedium];
+    itemV.topTitleNormalColor = rgba(255, 164, 164, 1);
+    itemV.topTitleSelectedColor = UIColor.purpleColor;
+    itemV.titleNormalFont = [UIFont systemFontOfSize:11 weight:UIFontWeightRegular];
+    itemV.titleNormalColor = rgba(255, 164, 164, 1);
+    itemV.titleSelectedColor = rgba(240, 60, 39, 1);
+    itemV.indicatorWidthScale = 0.8;
+    itemV.indicatorColor = UIColor.purpleColor;
+    itemV.needEqualWidth = NO;
+    itemV.delegate = self;
+    [self.view addSubview:itemV];
+    
+    //
+    NSMutableArray *itemModelArr = [NSMutableArray arrayWithCapacity:8];
+    for (NSInteger i=0; i<8; i++) {
+        DGTimeItemModel *itemModel = [[DGTimeItemModel alloc]init];
+        itemModel.topTitle = [NSString stringWithFormat:@"topTitle%ld",i];
+        itemModel.title = [NSString stringWithFormat:@"title%ld",i];
+        [itemModelArr addObject:itemModel];
+    }
+    itemV.titleArr = itemModelArr;
+}
+
+- (BOOL)timeItemView:(DGTimeItemView *)itemView didSelectedAtIndex:(NSUInteger)index {
+    return YES;
+}
+
 @end
