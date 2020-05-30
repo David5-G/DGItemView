@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |spec|
   spec.name         = 'DGItemView'
-  spec.version      = '1.0.0'
+  spec.version      = '1.0.1'
   spec.license      = { :type => "MIT", :file => "LICENSE" }
   spec.homepage     = 'https://github.com/David5-G/DGItemView'
   spec.authors      = { 'david' => '2632771473@qq.com' }
