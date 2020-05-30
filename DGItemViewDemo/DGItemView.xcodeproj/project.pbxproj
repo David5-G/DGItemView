@@ -13,8 +13,8 @@
 		639DF62D21BE5673000A9CCC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 639DF62C21BE5673000A9CCC /* Assets.xcassets */; };
 		639DF63021BE5673000A9CCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 639DF62E21BE5673000A9CCC /* LaunchScreen.storyboard */; };
 		639DF63321BE5673000A9CCC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 639DF63221BE5673000A9CCC /* main.m */; };
-		63AF4E9B246BAB6900D05951 /* DGTimeItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63AF4E99246BAB6900D05951 /* DGTimeItemView.m */; };
-		63FA689A229532CA00C55E2C /* DGItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 63FA6898229532CA00C55E2C /* DGItemView.m */; };
+		DC4899AA2482238E00E4015D /* DGItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4899A72482238E00E4015D /* DGItemView.m */; };
+		DC4899AB2482238E00E4015D /* DGTimeItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = DC4899A82482238E00E4015D /* DGTimeItemView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,10 +28,10 @@
 		639DF62F21BE5673000A9CCC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		639DF63121BE5673000A9CCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		639DF63221BE5673000A9CCC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		63AF4E99246BAB6900D05951 /* DGTimeItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGTimeItemView.m; sourceTree = "<group>"; };
-		63AF4E9A246BAB6900D05951 /* DGTimeItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGTimeItemView.h; sourceTree = "<group>"; };
-		63FA6898229532CA00C55E2C /* DGItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGItemView.m; sourceTree = "<group>"; };
-		63FA6899229532CA00C55E2C /* DGItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGItemView.h; sourceTree = "<group>"; };
+		DC4899A62482238E00E4015D /* DGTimeItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGTimeItemView.h; sourceTree = "<group>"; };
+		DC4899A72482238E00E4015D /* DGItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGItemView.m; sourceTree = "<group>"; };
+		DC4899A82482238E00E4015D /* DGTimeItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DGTimeItemView.m; sourceTree = "<group>"; };
+		DC4899A92482238E00E4015D /* DGItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DGItemView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +64,7 @@
 		639DF62221BE5672000A9CCC /* DGItemView */ = {
 			isa = PBXGroup;
 			children = (
-				63FA6897229532CA00C55E2C /* DGItemView */,
+				DC4899A52482238E00E4015D /* DGItemView */,
 				639DF62321BE5672000A9CCC /* AppDelegate.h */,
 				639DF62421BE5672000A9CCC /* AppDelegate.m */,
 				639DF62621BE5672000A9CCC /* ViewController.h */,
@@ -78,15 +78,16 @@
 			path = DGItemView;
 			sourceTree = "<group>";
 		};
-		63FA6897229532CA00C55E2C /* DGItemView */ = {
+		DC4899A52482238E00E4015D /* DGItemView */ = {
 			isa = PBXGroup;
 			children = (
-				63FA6899229532CA00C55E2C /* DGItemView.h */,
-				63FA6898229532CA00C55E2C /* DGItemView.m */,
-				63AF4E9A246BAB6900D05951 /* DGTimeItemView.h */,
-				63AF4E99246BAB6900D05951 /* DGTimeItemView.m */,
+				DC4899A92482238E00E4015D /* DGItemView.h */,
+				DC4899A72482238E00E4015D /* DGItemView.m */,
+				DC4899A62482238E00E4015D /* DGTimeItemView.h */,
+				DC4899A82482238E00E4015D /* DGTimeItemView.m */,
 			);
-			path = DGItemView;
+			name = DGItemView;
+			path = ../../DGItemView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,9 +160,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63FA689A229532CA00C55E2C /* DGItemView.m in Sources */,
+				DC4899AA2482238E00E4015D /* DGItemView.m in Sources */,
 				639DF62821BE5672000A9CCC /* ViewController.m in Sources */,
-				63AF4E9B246BAB6900D05951 /* DGTimeItemView.m in Sources */,
+				DC4899AB2482238E00E4015D /* DGTimeItemView.m in Sources */,
 				639DF63321BE5673000A9CCC /* main.m in Sources */,
 				639DF62521BE5672000A9CCC /* AppDelegate.m in Sources */,
 			);
